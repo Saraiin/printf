@@ -74,7 +74,7 @@ int print_string(int is_negative, int id, char buffer[],
 	else if (flags & F_SPACE)
 		fg = ' ';
 
-	return (write_num(id, buffer, flags, width, precision,
+	return (num_write_buf(id, buffer, flags, width, precision,
 		length, pd, fg));
 }
 
