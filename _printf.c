@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 			buffer[buff_id++] = format[j];
 			if (buff_id == BUFF_SIZE)
 				print_buffer(buffer, &buff_id);
-			printed_chars++;
+			charprinted++;
 		}
 		else
 		{

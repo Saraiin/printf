@@ -53,10 +53,23 @@ int gsize(const char *format, int *ag);
 int argprint(const char *ft, int *id, va_list list, char buffer[],
                 int flags, int width, int precision, int size);
 
+/****************** printfunc_0 ******************/
+int pr_char(va_list types, char buffer[],
+	int flags, int width, int precision, int size);
+
+int pr_string(va_list types, char buffer[],
+	int flags, int width, int precision, int size);
+
+int pr_int(va_list types, char buffer[], int flags,
+		int width, int precision, int size);
+
+int pr_binary(va_list types, char buffer[],
+	int flags, int width, int precision, int size);
 
 
+/****************** -printf ******************/
 
 
-
+void print_buffer(char buffer[], int *buff_id);
 int _printf(const char *format, ...);
 #endif 
