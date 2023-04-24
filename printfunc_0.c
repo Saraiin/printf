@@ -148,9 +148,9 @@ int pr_binary(va_list types, char buffer[],
 		sum += ar[i];
 		if (sum || i == 31)
 		{
-			char z = '0' + ar[i];
+			char l = '0' + ar[i];
 
-			write(1, &z, 1);
+			write(1, &l, 1);
 			ctr++;
 		}
 	}
