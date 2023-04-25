@@ -113,6 +113,25 @@ int pr_reverse(va_list types, char buffer[],
 
 int pr_rot13string(va_list types, char buffer[],
 	int flags, int width, int precision, int size);
+
+/****************** data_writer ******************/
+int character_writer(char c, char buffer[],
+	int flags, int width, int precision, int size);
+
+int print_string(int is_negative, int id, char buffer[],
+	int flags, int width, int precision, int size);
+
+int num_write_buf(int id, char buffer[],
+	int flags, int width, int prec,
+	int length, char pd, char ec);
+
+int write_un(int is_negative, int id,
+	char buffer[],
+	int flags, int width, int precision, int size);
+
+int write_mem_addr(char buffer[], int id, int length,
+	int width, int flags, char pd, char ec, int pd_start);
+
 /****************** -printf ******************/
 
 
