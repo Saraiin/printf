@@ -55,6 +55,7 @@ int ckdigit(char c); /* check if character is digit*/
 long int convert_nsize(long int n, int size);  /*Cast a number to the specified size*/
 long int convert_unsize(unsigned long int num, int size);
 
+int aphexa_code(char ascicode, char buffer[], int i);
 /****************** gprecision ******************/
 int gprecision(const char *format, int *ag, va_list list);
 
