@@ -6,10 +6,9 @@
  */
 void print_buffer(char buffer[], int *buff_id)
 {
-        if (*buff_id > 0)
-                write(1, &buffer[0], *buff_id);
-
-        *buff_id = 0;
+	if (*buff_id > 0)
+		write(1, &buffer[0], *buff_id);
+	*buff_id = 0;
 }
 
 /**
