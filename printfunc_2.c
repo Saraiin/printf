@@ -3,7 +3,7 @@
 /****************** PRINT POINTER ******************/
 /**
  * pr_pointer - Prints the value of a pointer variable
- * @types: List a of arguments
+ * @types: List  of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: get width
@@ -14,8 +14,8 @@
 int pr_pointer(va_list types, char buffer[],
 	int flags, int width, int precision, int size)
 {
-	char e_c = 0, pd = ' ';
-	int ind = BUFF_SIZE - 2, length = 2, pd_start = 1; /* length=2, for '0x' */
+	char ec = 0, pd = ' ';
+	int id = BUFF_SIZE - 2, length = 2, pd_start = 1; /* length=2, for '0x' */
 	unsigned long num_addrs;
 	char xa[] = "0123456789abcdef";
 	void *addrs = va_arg(types, void *);
@@ -41,9 +41,9 @@ int pr_pointer(va_list types, char buffer[],
 	if ((flags & F_ZERO) && !(flags & F_MINUS))
 		pd = '0';
 	if (flags & F_PLUS)
-		ec = '+', length++;
+		ec = '+'; length++;
 	else if (flags & F_SPACE)
-		ec = ' ', length++;
+		ec = ' '; length++;
 
 	id++;
 
@@ -54,7 +54,7 @@ int pr_pointer(va_list types, char buffer[],
 /************************* PRINT NON PRINTABLE *************************/
 /**
  * pr_non_printable - Prints ascii codes in hexa of non printable chars
- * @types: Lista of arguments
+ * @types: List of arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates active flags
  * @width: get width
