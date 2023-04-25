@@ -58,7 +58,7 @@ int pr_string(va_list types, char buffer[],
 			write(1, &s[0], ln);
 			for (i = width - ln; i > 0; i--)
 				write(1, " ", 1);
-			write(1, &str[0], ln);
+			write(1, &s[0], ln);
 			return (width);
 		}
 		else
