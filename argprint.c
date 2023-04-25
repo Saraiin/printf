@@ -21,12 +21,12 @@ int flags, int width, int precision, int size)
 		{'c', pr_char}, {'s', pr_string}, {'%', pr_percent},
 		{'i', pr_int}, {'d', pr_int}, {'b', pr_binary},
 		{'u', pr_unsigned}, {'o', pr_octal}, {'x', pr_hexadecimal},
-		{'X', pr_hexa_upper}, {'p', pr_pointer}, {'S', pr_nonprintable},
+		{'X', pr_hexa_upper}, {'p', pr_pointer}, {'S', pr_non_printable},
 		{'r', pr_reverse}, {'R', pr_rot13string}, {'\0', NULL}
 	};
 	for (i = 0; ft_types[i].ft != '\0'; i++)
 		if (ft[*id] == ft_types[i].ft)
-			return (ft_types[i].fn(list, buffer, flags, width, precision, size));
+			return (ft_types[i].f(list, buffer, flags, width, precision, size));
 	if (ft_types[i].ft == '\0')
 	{
 		if (ft[*id] == '\0')

@@ -9,15 +9,14 @@
 int gprecision(const char *format, int *ag, va_list list)
 {
 	int precision = -1;
-	int k;
+	int k = *ag + 1;
 
-	k = *ag + 1;
-	if (format[k] != ".")
+	if (format[k] != '.')
 		return (precision);
 	precision = 0;
 	for (k += 1; format[k] != '\0'; k++)
 	{
-		if (is_digit(format[k]))
+		if (ckdigit(format[k]))
 		{
 			precision *= 10;
 			precision += format[k] - '0';

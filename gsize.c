@@ -12,7 +12,7 @@ int gsize(const char *format, int *ag)
 
 	if (format[k] == '1')
 		size = S_LONG;
-	else if (format(k) == 'h')
+	else if (format[k] == 'h')
 		size = S_SHORT;
 	if (size == 0)
 		*ag = k - 1;
